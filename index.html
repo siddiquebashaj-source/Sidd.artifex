@@ -3,70 +3,63 @@
 <head>
   <title>Sidd Artifex</title>
   <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      background: #111;
-      color: white;
-      text-align: center;
-    }
-    h1 { margin-top: 20px; }
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #0d0d0d;
+  color: white;
+  text-align: center;
+}
 
-    .gallery img {
-      width: 250px;
-      margin: 10px;
-      border-radius: 10px;
-    }
+h1 {
+  margin-top: 20px;
+  font-size: 32px;
+}
 
-    button {
-      padding: 12px 20px;
-      background: #ff4d4d;
-      border: none;
-      color: white;
-      cursor: pointer;
-      border-radius: 8px;
-      font-size: 16px;
-    }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
 
-    /* Popup */
-    .popup {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.8);
-    }
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  transition: 0.3s;
+}
 
-    .popup-content {
-      background: white;
-      color: black;
-      padding: 20px;
-      margin: 100px auto;
-      width: 300px;
-      border-radius: 10px;
-    }
+.gallery img:hover {
+  transform: scale(1.05);
+}
   </style>
 </head>
 
 <body>
 
-<h1>Sidd Artifex 🎨</h1>
-<p>Custom Portrait Artist</p>
+<h1>Custom Portraits by Sidd 🎨</h1>
+<p>Turn your photos into beautiful hand-drawn artworks</p>
 
-<button onclick="openPopup()">Order Your Portrait</button>
+<button onclick="openPopup()">Order Your Custom Portrait Now</button>
 
+<di
 <div class="gallery">
-  <img src="https://via.placeholder.com/250">
-  <img src="https://via.placeholder.com/250">
-  <img src="https://via.placeholder.com/250">
+  <img src="https://i.postimg.cc/k6r9ksWh/IMG-20250308-073631-468-(1).webp">
+  <img src="https://i.postimg.cc/cgqZVhfD/IMG-20250315-112043-791.webp">
+  <img src="https://i.postimg.cc/nj8Z62qT/IMG-20250428-120626-373.webp">
+  <img src="https://i.postimg.cc/vgRMph50/IMG-20250429-061323-562.webp">
+  <img src="https://i.postimg.cc/5Yc1Zg85/IMG-20250525-131051-019.webp">
+  <img src="https://i.postimg.cc/Vry13gXB/IMG-20250525-131051-181.webp">
+  <img src="https://i.postimg.cc/vgRMph59/IMG-20250607-210459-163.webp">
+  <img src="https://i.postimg.cc/2bpmPGn4/IMG-20250612-182836-030.webp">
+  <img src="https://i.postimg.cc/WFRjQ80t/IMG-20250920-074457-848.webp">
 </div>
 
 <!-- Popup -->
 <div class="popup" id="popup">
   <div class="popup-content">
-    <h3>Contact Me</h3>
-    <p>Send your photo on WhatsApp</p>
+    <h3>Place Your Order</h3>
+<p>Send your photo on WhatsApp and get your portrait started!</p>
     <a href="https://wa.me/8122676183">Chat Now</a>
     <br><br>
     <button onclick="closePopup()">Close</button>
