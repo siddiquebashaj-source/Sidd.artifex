@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>Sidd Artifex</title>
@@ -8,6 +8,7 @@ body {
   margin:0;
   font-family: 'Segoe UI', sans-serif;
   color:#333;
+  scroll-behavior:smooth;
 }
 
 /* HERO */
@@ -28,24 +29,31 @@ body {
 
 .hero h1 {
   font-size:45px;
-  margin:0;
+  animation: fadeIn 1s ease-in;
 }
 
 .hero p {
   max-width:600px;
   margin-top:15px;
   line-height:1.5;
+  animation: fadeIn 2s ease-in;
 }
 
+/* BUTTON */
 .btn {
   margin-top:25px;
-  padding:12px 30px;
-  background:#ff4d4d;
+  padding:14px 32px;
+  background:#25D366;
   color:white;
   border:none;
   border-radius:30px;
   font-size:16px;
   cursor:pointer;
+  transition:0.3s;
+}
+
+.btn:hover {
+  transform:scale(1.08);
 }
 
 /* SECTIONS */
@@ -78,7 +86,12 @@ h2 {
   padding:20px;
   border-radius:10px;
   width:250px;
-  box-shadow:0 3px 8px rgba(0,0,0,0.1);
+  box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.service:hover {
+  transform:translateY(-5px);
 }
 
 /* GALLERY */
@@ -91,7 +104,7 @@ h2 {
 .gallery img {
   width:100%;
   border-radius:10px;
-  transition:0.3s;
+  transition:0.4s;
 }
 
 .gallery img:hover {
@@ -100,53 +113,70 @@ h2 {
 
 /* CTA */
 .cta {
-  background:#ff4d4d;
+  background:#111;
   color:white;
 }
 
-.cta button {
-  background:white;
-  color:#ff4d4d;
-  margin-top:15px;
+.cta .btn {
+  background:#25D366;
 }
 
 /* CONTACT */
-.contact a {
-  display:block;
+.contact-links a {
+  display:inline-block;
   margin:10px;
+  padding:12px 20px;
+  border-radius:30px;
   text-decoration:none;
-  font-weight:bold;
-  color:#ff4d4d;
+  background:#f1f1f1;
+  color:#333;
+  transition:0.3s;
+}
+
+.contact-links a:hover {
+  background:#25D366;
+  color:white;
 }
 
 /* FOOTER */
 footer {
-  background:#111;
+  background:#000;
   color:#aaa;
   text-align:center;
   padding:20px;
 }
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
+}
 </style>
+
 </head>
 
 <body>
 
 <!-- HERO -->
 <div class="hero">
-  <h1>Sidd Artifex 🎨</h1>
+  <h1>Sidd Artifex</h1>
   <p>
   Creating custom portraits since 2023, trusted by clients across India and worldwide.
-  Delivering high-quality, realistic artwork with 100% satisfaction.
+  Delivering high-quality artwork with 100% satisfaction.
   </p>
-  <button class="btn" onclick="scrollToContact()">Order Now</button>
+
+  <!-- DIRECT WHATSAPP BUTTON -->
+  <a href="https://wa.me/918122676183?text=Hi%20I%20want%20to%20order%20a%20portrait" target="_blank">
+    <button class="btn">Place Order on WhatsApp</button>
+  </a>
 </div>
 
 <!-- ABOUT -->
 <section>
   <h2>About My Art</h2>
   <p class="about">
-  I specialize in hand-drawn portraits that capture emotions, memories, and real-life expressions.
-  Each piece is crafted with precision and passion, making it a perfect personalized gift for your loved ones.
+  I create realistic hand-drawn portraits that capture emotions and memories.
+  Each artwork is crafted with precision and passion, making it a meaningful and personalized gift.
   </p>
 </section>
 
@@ -180,16 +210,18 @@ footer {
 <!-- CTA -->
 <section class="cta">
   <h2>Ready to Turn Your Photo into Art?</h2>
-  <button class="btn" onclick="scrollToContact()">Contact Now</button>
+  <a href="https://wa.me/918122676183?text=Hi%20I%20want%20to%20order%20a%20portrait" target="_blank">
+    <button class="btn">Start Your Order</button>
+  </a>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-  <h2>Contact Me</h2>
-  <div class="contact">
-    <a href="https://wa.me/918122676183">📱 WhatsApp</a>
-    <a href="https://www.instagram.com/sidd.artifex">📸 Instagram</a>
-    <a href="https://www.facebook.com/share/1Cgcy5Tjuo/">📘 Facebook</a>
+<section>
+  <h2>Connect With Me</h2>
+  <div class="contact-links">
+    <a href="https://wa.me/918122676183" target="_blank">WhatsApp</a>
+    <a href="https://www.instagram.com/sidd.artifex" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/share/1Cgcy5Tjuo/" target="_blank">Facebook</a>
   </div>
 </section>
 
@@ -197,12 +229,6 @@ footer {
 <footer>
   © 2026 Sidd Artifex
 </footer>
-
-<script>
-function scrollToContact(){
-  document.getElementById("contact").scrollIntoView({behavior:"smooth"});
-}
-</script>
 
 </body>
 </html>
