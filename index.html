@@ -1,148 +1,189 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 <head>
-  <title>Sidd Artifex</title>
+<title>Sidd Artifex</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      scroll-behavior: smooth;
-      background: #f5f7fa;
-      color: #333;
-    }
+<style>
+body {
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  color:#333;
+}
 
-    nav {
-      position: fixed;
-      width: 100%;
-      background: white;
-      padding: 15px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      text-align: center;
-      z-index: 1000;
-    }
+/* HERO */
+.hero {
+  height:100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url('https://i.postimg.cc/k6r9ksWh/IMG-20250308-073631-468-(1).webp');
+  background-size:cover;
+  background-position:center;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
 
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
+.hero h1 {
+  font-size:45px;
+  margin:0;
+}
 
-    header {
-      height: 100vh;
-      background: linear-gradient(to right, #ff7e5f, #feb47b);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-    }
+.hero p {
+  max-width:600px;
+  margin-top:15px;
+  line-height:1.5;
+}
 
-    header h1 {
-      font-size: 40px;
-      margin: 0;
-    }
+.btn {
+  margin-top:25px;
+  padding:12px 30px;
+  background:#ff4d4d;
+  color:white;
+  border:none;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+}
 
-    header p {
-      margin-top: 15px;
-      max-width: 600px;
-    }
+/* SECTIONS */
+section {
+  padding:70px 20px;
+  text-align:center;
+}
 
-    .btn {
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: white;
-      color: #ff5e62;
-      border: none;
-      border-radius: 25px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+h2 {
+  margin-bottom:20px;
+}
 
-    section {
-      padding: 80px 20px;
-      text-align: center;
-    }
+/* ABOUT */
+.about {
+  max-width:700px;
+  margin:auto;
+  line-height:1.6;
+}
 
-    .about {
-      max-width: 700px;
-      margin: auto;
-    }
+/* SERVICES */
+.services {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+.service {
+  background:#f7f7f7;
+  padding:20px;
+  border-radius:10px;
+  width:250px;
+  box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
 
-    .card {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+/* GALLERY */
+.gallery {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
+}
 
-    .card img {
-      width: 100%;
-    }
+.gallery img {
+  width:100%;
+  border-radius:10px;
+  transition:0.3s;
+}
 
-    .contact a {
-      display: block;
-      margin: 10px;
-      color: #ff5e62;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.gallery img:hover {
+  transform:scale(1.05);
+}
 
-    footer {
-      background: #111;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-  </style>
+/* CTA */
+.cta {
+  background:#ff4d4d;
+  color:white;
+}
+
+.cta button {
+  background:white;
+  color:#ff4d4d;
+  margin-top:15px;
+}
+
+/* CONTACT */
+.contact a {
+  display:block;
+  margin:10px;
+  text-decoration:none;
+  font-weight:bold;
+  color:#ff4d4d;
+}
+
+/* FOOTER */
+footer {
+  background:#111;
+  color:#aaa;
+  text-align:center;
+  padding:20px;
+}
+</style>
 </head>
 
 <body>
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<header id="home">
+<!-- HERO -->
+<div class="hero">
   <h1>Sidd Artifex 🎨</h1>
-  <p>Creating custom portraits since 2023, trusted by clients across India and worldwide. With a strong social media presence, delivering high-quality artwork with 100% satisfaction.</p>
+  <p>
+  Creating custom portraits since 2023, trusted by clients across India and worldwide.
+  Delivering high-quality, realistic artwork with 100% satisfaction.
+  </p>
   <button class="btn" onclick="scrollToContact()">Order Now</button>
-</header>
+</div>
 
-<section id="about">
-  <h2>About Me</h2>
+<!-- ABOUT -->
+<section>
+  <h2>About My Art</h2>
   <p class="about">
-    I specialize in creating realistic hand-drawn portraits that capture emotions and memories. Every artwork is crafted with attention to detail and passion, making each piece unique and meaningful.
+  I specialize in hand-drawn portraits that capture emotions, memories, and real-life expressions.
+  Each piece is crafted with precision and passion, making it a perfect personalized gift for your loved ones.
   </p>
 </section>
 
-<section id="gallery">
-  <h2>My Work</h2>
-  <div class="gallery">
-    <div class="card"><img src="https://i.postimg.cc/k6r9ksWh/IMG-20250308-073631-468-(1).webp"></div>
-    <div class="card"><img src="https://i.postimg.cc/cgqZVhfD/IMG-20250315-112043-791.webp"></div>
-    <div class="card"><img src="https://i.postimg.cc/nj8Z62qT/IMG-20250428-120626-373.webp"></div>
-    <div class="card"><img src="https://i.postimg.cc/vgRMph50/IMG-20250429-061323-562.webp"></div>
-    <div class="card"><img src="https://i.postimg.cc/5Yc1Zg85/IMG-20250525-131051-019.webp"></div>
-    <div class="card"><img src="https://i.postimg.cc/Vry13gXB/IMG-20250525-131051-181.webp"></div>
-    <div class="card"><img src="https://i.postimg.cc/vgRMph59/IMG-20250607-210459-163.webp"></div>
-    <div class="card"><img src="https://i.postimg.cc/2bpmPGn4/IMG-20250612-182836-030.webp"></div>
-    <div class="card"><img src="https://i.postimg.cc/WFRjQ80t/IMG-20250920-074457-848.webp"></div>
+<!-- SERVICES -->
+<section>
+  <h2>What I Offer</h2>
+  <div class="services">
+    <div class="service">Pencil Sketch Portraits</div>
+    <div class="service">Realistic Drawings</div>
+    <div class="service">Couple & Family Portraits</div>
+    <div class="service">Custom Gift Artworks</div>
   </div>
 </section>
 
+<!-- GALLERY -->
+<section>
+  <h2>My Works</h2>
+  <div class="gallery">
+    <img src="https://i.postimg.cc/k6r9ksWh/IMG-20250308-073631-468-(1).webp">
+    <img src="https://i.postimg.cc/cgqZVhfD/IMG-20250315-112043-791.webp">
+    <img src="https://i.postimg.cc/nj8Z62qT/IMG-20250428-120626-373.webp">
+    <img src="https://i.postimg.cc/vgRMph50/IMG-20250429-061323-562.webp">
+    <img src="https://i.postimg.cc/5Yc1Zg85/IMG-20250525-131051-019.webp">
+    <img src="https://i.postimg.cc/Vry13gXB/IMG-20250525-131051-181.webp">
+    <img src="https://i.postimg.cc/vgRMph59/IMG-20250607-210459-163.webp">
+    <img src="https://i.postimg.cc/2bpmPGn4/IMG-20250612-182836-030.webp">
+    <img src="https://i.postimg.cc/WFRjQ80t/IMG-20250920-074457-848.webp">
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Ready to Turn Your Photo into Art?</h2>
+  <button class="btn" onclick="scrollToContact()">Contact Now</button>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
   <h2>Contact Me</h2>
   <div class="contact">
@@ -152,13 +193,14 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Sidd Artifex</p>
+  © 2026 Sidd Artifex
 </footer>
 
 <script>
-function scrollToContact() {
-  document.getElementById("contact").scrollIntoView({behavior: "smooth"});
+function scrollToContact(){
+  document.getElementById("contact").scrollIntoView({behavior:"smooth"});
 }
 </script>
 
